@@ -33,7 +33,7 @@ header ul {
     list-style-position: inside;
 }
 
-#header-image {
+.header-image {
     width: 470px;
     min-height: 212px;
     background-color: #ffffff;
@@ -61,12 +61,13 @@ h2 {
     margin: 0;
 }
 
-.about-product-article :nth-child(2) {
+.about-product-article :nth-child(2), .about-product-article :nth-child(3) {
     padding: 0;
     margin: 20px 0 0 0;
+    color: #5c5c5c;
 }
 
-#about-product-video {
+.about-product-video {
     width: 430px;
     min-height: 245px;
     background-color:#445162;
@@ -100,7 +101,7 @@ h2 {
 }
 
 .dignity ul {
-    color: #333;
+    color: #5c5c5c;
     list-style-type: none;
     list-style-position: outside;
 }
@@ -152,6 +153,10 @@ figure img {
     display: inline-block;
 }
 
+.screenshots p {
+    color: #5c5c5c;
+}
+
 .screenshots:after {
     content: "";
     display: block;
@@ -174,7 +179,7 @@ figure img {
 
 .reviews h2 {
     text-align: center;
-    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 .reviews-image {
@@ -187,13 +192,23 @@ figure img {
 
 .reviews-article-div {
     width: 460px;
-    min-height: 122px;
-    float: left;
-    margin-left: 15px;
-    background-image: url(../img/sec4-bg.png);
-    background-repeat: no-repeat;
-    padding-left: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #ccc;
+    margin: 0 0 20px 105px;
+    border-radius: 10px;
+    position: relative;
 }
+
+.reviews-article-div:before {
+    content: "";
+    display: block;
+    border: 20px solid transparent; 
+    border-right: 20px solid #ccc;
+    position: absolute;
+    top: 20px;
+    left: -30px;
+  }
 
 .reviews-article-div p {
     font-size: 14px;
@@ -201,12 +216,19 @@ figure img {
 
 .reviews-italic {
     font-style: italic;
-    padding-right: 15px;
+    color: #5c5c5c;
+    padding: 0;
 }
 
 .reviews-signature {
     color: #989898;
+    display: block;
+    margin: 3px 0 0 0;
 }
+
+/* .reviews-article-div :last-child {  Добавлено преподавателем. ???
+    margin: 0;
+} */
 
 .reviews:after {
     content: "";
@@ -218,12 +240,14 @@ figure img {
 .prices {
     min-height: 655px;
     margin: 0 auto;
+    padding: 50px;
+    box-sizing: border-box;
 }
 
 .prices h2 {
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 15px;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 .prices-flex {
@@ -343,9 +367,11 @@ input {
     display: block;
     margin: 0 auto;
     border-radius: 10px;
+    padding: 0;
 }
 
 textarea {
+    width: 493px;
     margin-bottom: 15px;
     color: #445162;
     padding-left: 10px;
@@ -354,41 +380,64 @@ textarea {
 
 address {
     width: 250px;
+    margin: 0;
     color: #ffffff;
     float: left;
+    box-sizing: border-box;
 }
 
-address p {
-    padding-left: 30px;
-    margin-bottom: 20px;
-}
+.main-footer-contacts-link {
+    display: block;
+    margin: 0 0 15px 0;
+    padding: 0 0 0 30px;
+    position: relative;
+    font-size: 16px;
+    font-family: "arial";
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  .main-footer-contacts-link:last-of-type {
+    margin: 0 0 32px 0;
+  }
+  
+  .main-footer-contacts-link::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 1px;
+    left: 0;
+  }
+  
+  .main-footer-contacts-link:nth-of-type(1):before {
+    /* border: 1px solid #fff; */
+    background-image: url(../img/skype.png);
+  }
+  
+  .main-footer-contacts-link:nth-of-type(2):before {
+    background-image: url(../img/icq.png);
+  }
+  
+  .main-footer-contacts-link:nth-of-type(3):before {
+    background-image: url(../img/email.png);
+  }
+  
+  .main-footer-contacts-link:nth-of-type(4):before {
+    background-image: url(../img/phone.png);
+  }
 
 .footer-contacts-icons {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
   }
-
-.skype {
-    background-image: url(../img/skype.png);
-    background-repeat: no-repeat;
-}
-
-.icq {
-    background-image: url(../img/icq.png);
-    background-repeat: no-repeat;
-}
-
-.email {
-    background-image: url(../img/email.png);
-    background-repeat: no-repeat;
-}
-
-.phone {
-    background-image: url(../img/phone.png);
-    background-repeat: no-repeat;
-    margin-bottom: 30px;
-}
 
 .footer-rights p{
     text-align: center;

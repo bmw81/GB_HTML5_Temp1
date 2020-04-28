@@ -237,6 +237,17 @@ figure img {
     clear:both;
 }
 
+.reviews-column:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.reviews-column :nth-child(3) .reviews-article-div {
+    margin: 0 0 0 105px;
+    }
+
 .prices {
     min-height: 655px;
     margin: 0 auto;
@@ -438,6 +449,40 @@ address {
     justify-content: space-between;
     box-sizing: border-box;
   }
+
+.footer-contacts-net {
+    width: 43px;
+    height: 42px;
+    background-image: url(../img/social_buttons.png); 
+}
+
+.footer-contacts-net:nth-of-type(2) {
+    width: 42px;
+    height: 42px;
+    background-image: url(../img/social_buttons.png);
+    background-position: 42px 0;
+}
+
+.footer-contacts-net:nth-of-type(3) {
+    width: 43px;
+    height: 42px;
+    background-image: url(../img/social_buttons.png);
+    background-position: 91px 0;
+}
+
+.footer-contacts-net:nth-of-type(4) {
+    width: 43px;
+    height: 42px;
+    background-image: url(../img/social_buttons.png);
+    background-position: 142px 0;
+}
+
+.footer-contacts-net:nth-of-type(5) {
+    width: 43px;
+    height: 42px;
+    background-image: url(../img/social_buttons.png);
+    background-position: 191px 0;
+}
 
 .footer-rights p{
     text-align: center;
